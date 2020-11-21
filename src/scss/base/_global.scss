@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+}
+
+.text-bold {
+  font-weight: bold;
+  font-family: $primary-font;
+  font-kerning: normal;
+  color: $dark-background;
+}
+
+.text-light {
+  font-weight: 300;
+  font-family: $primary-font;
+  font-kerning: normal;
+  color: $dark-background;
+}
+
+.m-0 {
+  margin: 0;
+}
+
+.p-0 {
+  padding: 0;
+}
+.p-3 {
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+.m-1 {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.mt-mb {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.i-flex {
+  display: inline-flex;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.img-15 {
+  width: 15px;
+  height: 15px;
+}

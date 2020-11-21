@@ -1,0 +1,62 @@
+.container {
+  width: 100%;
+  .profile-section {
+    // display: flex;
+    padding: 10px;
+    > div.profile {
+      display: flex;
+      .profile-avatar {
+        padding-right: 20px;
+        > img {
+          height: 50px;
+          width: 50px;
+          border-radius: 50%;
+        }
+      }
+      .profile-name {
+        .name {
+          > p {
+            margin: 0;
+            font-size: 26px;
+          }
+          > span {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+    > div.status {
+      align-items: center;
+      border-radius: borderRadius(6) * 1px;
+      display: flex;
+      width: 100%;
+      margin: 20px auto;
+      @include border();
+      .status-icon {
+        margin: 0 8px;
+        > img {
+          width: 18px;
+        }
+      }
+      .status-message {
+        > p.message {
+          margin: 0;
+          font-size: 12px;
+        }
+      }
+    }
+    .stats {
+      > div {
+        .stats-prop {
+          display: flex;
+
+          > li {
+            list-style: none;
+            padding-right: 8px;
+            display: flex;
+          }
+        }
+      }
+    }
+  }
+}
