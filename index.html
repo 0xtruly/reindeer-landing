@@ -4,88 +4,75 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Github | Profile</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:300,400,500,600,700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Text&display=swap" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+    <script src="https://use.fontawesome.com/7378e8922c.js"></script>
+    <title>Reindeer</title>
   </head>
   <body>
-    <header class="menu-wrapper">
-      <input type="checkbox" class="toggler" />
-      <a href="#" alt="" class="header-link link-icon">
-        <svg
-          class="octicon octicon-mark-github v-align-middle"
-          height="32"
-          viewBox="0 0 16 16"
-          version="1.1"
-          width="32"
-          aria-hidden="true"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
-          ></path>
-        </svg>
-      </a>
-      <div class="hamburger">
-        <div></div>
-      </div>
-      <div class="menu">
-        <div>
-          <div>
-            <ul class="navbar-nav"></ul>
-          </div>
+    <div class="overlay">
+      <h1 class="overlay-title">Reindeer</h1>
+      <span>snow life</span>
+    </div>
+
+    <div class="wrapper">
+      <div class="nav">
+        <div class="logo">
+          <h1>
+            <span
+              >rein <br />
+              deer</span
+            >
+            <br />
+            snow life
+          </h1>
         </div>
-      </div>
-    </header>
-    <div class="container">
-      <section class="profile-section">
-        <div class="profile">
-          <a href="" class="profile-avatar"></a>
-          <div class="profile-name">
-            <div class="name"></div>
-          </div>
-        </div>
-        <div class="status p-3">
-          <div class="status-icon"></div>
-          <div class="status-message">
-            <p class="message text-light m-0"></p>
-          </div>
-        </div>
-        <div class="bio m-1 mt-mb">
-          <p class="bio-text text-light m-0"></p>
-        </div>
-        <div class="stats m-1">
-          <div>
-            <ul class="stats-prop p-0">
-              <li class="followers">
-                <img class="img-15" src="./assets/images/users.svg" alt="" >
-                <div>
-                  <span class="followers-count">0</span>
-                  <span>followers</span>
-                </div>
-              </li>
-              <li class="following">
-                <div>
-                  <span class="following-count">0</span>
-                  <span>following</span>
-                </div>
-              </li>
-              <li class="starred">
-                <img class="img-15" src="./assets/images/star.svg" alt="" >
-                <span class="starred-count text-bold">0</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-      <section class="repositories-section m-1">
-        <div class="repositories-list">
-          <ul class="repositories m-1">
-            <!-- <li class="repo-card d-flex">
-              <div left-col col-10></div>
-              <div right-col col-2></div>
-            </li> -->
+        <div class="menu-links">
+          <ul>
+            <li>home.</li>
+            <li>snow life.</li>
+            <li>contact.</li>
           </ul>
         </div>
-      </section>
+        <div class="scrolldown">scroll</div>
+      </div>
+      <div class="text">
+        <div class="title">reindeer</div>
+        <p>
+          The reindeer, also known as caribou in North America, is a species of deer with
+          circumpolar distribution, native to Arctic, sub-Arctic, tundra, boreal, and mountainous
+          regions of northern Europe, Siberia, and North America.
+        </p>
+      </div>
+      <div class="watchnow">
+        <i class="fa fa-play"></i>
+        <a href="#">watch now!</a>
+      </div>
+      <div class="media">
+        <ul>
+          <li>
+            <i class="fa fa-facebook"></i>
+          </li>
+          <li>
+            <i class="fa fa-twitter"></i>
+          </li>
+          <li>
+            <i class="fa fa-instagram"></i>
+          </li>
+        </ul>
+      </div>
+      <div class="eclipse-container">
+        <div class="eclipse thin"></div>
+        <div class="eclipse thick"></div>
+        <div class="eclipse yellow"></div>
+        <div class="circle1"><span>Rangifer tarandus</span></div>
+        <div class="circle2"><span>caribou</span></div>
+      </div>
     </div>
   </body>
 </html>
