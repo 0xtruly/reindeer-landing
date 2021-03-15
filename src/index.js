@@ -1,3 +1,2 @@
-require('./js/util.js');
-require('./js/query.js');
+require('./js/script.js');
 require('./scss/app.scss');
