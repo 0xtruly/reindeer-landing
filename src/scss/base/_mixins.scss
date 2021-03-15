@@ -1,7 +1,3 @@
-@mixin border {
-  border: 1px solid $gray;
-}
-
 @function borderRadius($radius) {
   @return $radius;
 }

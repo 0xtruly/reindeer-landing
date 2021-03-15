@@ -1,51 +1,234 @@
 * {
-  box-sizing: border-box;
-}
-
-.text-bold {
-  font-weight: bold;
-  font-family: $primary-font;
-  font-kerning: normal;
-  color: $dark-background;
-}
-
-.text-light {
-  font-weight: 300;
-  font-family: $primary-font;
-  font-kerning: normal;
-  color: $dark-background;
-}
-
-.m-0 {
   margin: 0;
-}
-
-.p-0 {
   padding: 0;
 }
-.p-3 {
-  padding-top: 3px;
-  padding-bottom: 3px;
-}
-.m-1 {
-  margin-left: 10px;
-  margin-right: 10px;
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: 'agency fb';
+  background: url('assets/images/reindeer.png') no-repeat;
+  background-position: 50%;
+  background-size: cover;
+  overflow: hidden;
 }
 
-.mt-mb {
-  margin-top: 20px;
-  margin-bottom: 20px;
+ul {
+  list-style: none;
 }
 
-.i-flex {
-  display: inline-flex;
-}
-
-.d-flex {
+.nav {
+  width: 200px;
+  height: 100vh;
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.img-15 {
-  width: 15px;
-  height: 15px;
+.logo {
+  flex: 0 0 50%;
+  background: $primary-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  h1 {
+    font-weight: 300;
+    text-transform: uppercase;
+    font-weight: 16px;
+    line-height: 2;
+  }
+  span {
+    font-size: 60px;
+    line-height: 1;
+  }
+}
+
+.scrolldown {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  transform: rotate(-90deg);
+}
+
+.scrolldown::before {
+  display: inline-block;
+  content: '';
+  border-top: 1px solid #000;
+  width: 65px;
+  margin: 0 10px 0 0;
+  transform: translateY(10px);
+}
+
+.text {
+  top: 11%;
+  right: 11px;
+  position: absolute;
+  transform: translateY(-50%);
+  text-align: right;
+  color: #494949;
+  .title {
+    font-size: 100px;
+  }
+  p {
+    margin-left: 35%;
+  }
+  @media (min-width: 768px) {
+    top: 25%;
+    right: 180px;
+    & .title {
+      font-size: 150px;
+    }
+    & p {
+      margin-left: 55%;
+    }
+  }
+}
+
+.watchnow {
+  position: absolute;
+  top: 80%;
+  right: 0;
+  transform: translateY(-50%);
+  background: $primary-color;
+  padding: 30px 180px 30px 30px;
+  a {
+    text-decoration: none;
+    color: #000;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 600;
+    border-bottom: 3px solid #000;
+    padding-bottom: 5px;
+  }
+  @media (min-width: 768px) {
+    top: 60%;
+  }
+}
+
+.fa-play {
+  color: #fff;
+  font-size: 30px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.media {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 20px;
+  ul li {
+    display: inline-block;
+    padding: 20px;
+    font-size: 20px;
+    color: #494949;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+  ul li:hover {
+    background: $primary-color;
+    height: 12px;
+  }
+}
+
+.circle1,
+.circle2 {
+  border-style: solid;
+  width: 64px;
+  height: 64px;
+  border-width: 1px;
+  border-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  position: absolute;
+  span {
+    position: absolute;
+    top: 25px;
+    width: 100px;
+    font-size: 14px;
+  }
+}
+
+.circle1 {
+  left: 125px;
+  top: 155px;
+  span {
+    left: 75px;
+  }
+  @media (min-width: 768px) {
+    right: 150px;
+    bottom: 150px;
+  }
+}
+
+.circle2 {
+  right: 115px;
+  bottom: 125px;
+  span {
+    left: -40px;
+  }
+  @media (min-width: 768px) {
+    right: 150px;
+    bottom: 150px;
+  }
+}
+.circle1::before,
+.circle1::after {
+  content: '';
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.circle2::before,
+.circle2::after {
+  content: '';
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.circle1::before,
+.circle2::before {
+  width: 12px;
+  height: 12px;
+  background: white;
+  z-index: 1;
+}
+
+.circle1::after,
+.circle2::after {
+  width: 40px;
+  height: 40px;
+  background: $primary-color;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background: $primary-color;
+  top: 0%;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    font-size: 100px;
+    letter-spacing: 10px;
+    @media (min-width: 768px) {
+      letter-spacing: 20px;
+    }
+  }
+  span {
+    font-size: 30px;
+    letter-spacing: 3px;
+  }
 }
