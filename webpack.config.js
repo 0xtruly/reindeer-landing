@@ -1,6 +1,8 @@
 const DotenvWebpackPlugin = require('dotenv-webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const HtmlWebpackInlineSVGPlugin = require('html-webpack-inline-svg-plugin');
+svgToMiniDataURI = require('mini-svg-data-uri');
 const path = require('path');
 
 module.exports = {
@@ -9,6 +11,15 @@ module.exports = {
     filename: 'main.js',
     path: path.join(__dirname, 'dist'),
     publicPath: '/',
+  },
+  resolve: {
+    fallback: {
+      path: require.resolve('path-browserify'),
+    },
+    alias: {
+      assets: path.resolve(__dirname, 'assets/'),
+      src: path.resolve(__dirname, 'src'),
+    },
   },
   module: {
     rules: [
@@ -33,28 +44,22 @@ module.exports = {
         use: ['style-loader', 'css-loader', 'sass-loader'],
       },
       {
-        test: /\.(png|gif|jpeg)$/,
+        test: /\.(png|gif|jpg|jpeg|woff|woff2|eot|ttf|svg)$/,
         use: [
           {
             loader: 'url-loader',
             options: {
-              limit: 5000,
+              limit: 100000,
             },
           },
         ],
       },
       {
-        test: /\.(png|jpe?g|gif})$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {},
-          },
-        ],
-      },
-      {
         test: /\.svg$/,
-        use: ['svg-url-loader?name=assets/images/[name].[ext]'],
+        use: {
+          loader: 'svg-url-loader',
+          options: {},
+        },
       },
       {
         test: /\.css$/,
@@ -72,6 +77,7 @@ module.exports = {
       chunkFilename: '[id].css',
     }),
     new DotenvWebpackPlugin(),
+    // new HtmlWebpackInlineSVGPlugin(),
   ],
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
